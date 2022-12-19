@@ -5,7 +5,7 @@ export default class Counter extends Component {
         count: 0
     };
     onIncrement = () => this.setState(prevState => ({count: prevState.count + (parseInt(this.props.onIncrement)||1)}))
-    onDecrement = () => this.state.count>0&&this.setState(prevState => ({count: prevState.count - (parseInt(this.props.onDecrement)||1)}))
+    onDecrement = () => this.state.count>=(parseInt(this.props.onDecrement)||1)&&this.setState(prevState => ({count: prevState.count - (parseInt(this.props.onDecrement)||1)}))
   render() {
     return (
       <div className='counter'>
