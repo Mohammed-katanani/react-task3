@@ -22,4 +22,6 @@ button:last-of-type{
 p{
     /* margin-right: 20px; */
     font-weight: bold;
+    width: 70px;
+    text-align: center;
 }
