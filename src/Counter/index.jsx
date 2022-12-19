@@ -9,7 +9,7 @@ export default class Counter extends Component {
   render() {
     return (
       <div className='counter'>
-        <p>{this.state.count>9?this.state.count:`0${this.state.count}`}</p>
+        <p>{this.state.count}</p>
         <button onClick={this.onIncrement}>+</button>
         <button onClick={this.onDecrement}>-</button>
       </div>
