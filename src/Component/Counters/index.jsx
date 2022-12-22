@@ -33,15 +33,15 @@ export default class Counters extends Component {
         counters: prevState.counters.map((item) => {
           if (item.id === id && item.count >= steps) {
             isDec=true
-            console.log(isDec);
             return { ...item, count: item.count - steps };
           }
           return item;
         }),
+        
+        total:isDec?prevState.total - steps:prevState.total
       };
       
     });
-    setTimeout(()=>isDec===true&&this.setState(prevState => ({total: prevState.total - steps})))
   };
 
 
